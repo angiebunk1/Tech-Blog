@@ -1,16 +1,14 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const park_name = document.querySelector('input[id="park-name"]').value;
-  const location = document.querySelector('input[id="location"]').value;
-  const review = document.querySelector('textarea[id="review"]').value;
+  const post_title = document.querySelector('input[id="post_title"]').value;
+  const post_content = document.querySelector('textarea[id="post_content"]').value;
 
   const response = await fetch(`/api/posts`, {
     method: 'POST',
     body: JSON.stringify({
-      park_name,
-      location,
-      review
+      post_title,
+      post_content
     }),
     headers: {
       'Content-Type': 'application/json'
