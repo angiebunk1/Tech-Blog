@@ -6,9 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "seed": "node ./seeds/index.js",
-    "build": "postcss ./src/input.css -o ./public/stylesheets/output.css",
-    "prod": "NODE_ENV=production postcss ./src/input.css -o ./public/stylesheets/output.css"
+    "seed": "node ./seeds/index.js"
   },
   "repository": {
     "type": "git",
