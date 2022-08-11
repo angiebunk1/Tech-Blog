@@ -1,0 +1,32 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "An application where users in the techonology field can post and comment on blog entries",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "seed": "node ./seeds/index.js",
+    "build": "postcss ./src/input.css -o ./public/stylesheets/output.css",
+    "prod": "NODE_ENV=production postcss ./src/input.css -o ./public/stylesheets/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angiebunk1/Tech-Blog"
+  },
+  "author": "Angie Gustafson",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}

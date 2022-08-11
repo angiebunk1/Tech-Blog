@@ -1,0 +1,37 @@
+<div class="flex flex-col mx-5 mt-5">
+  <h2 class="text-xl font-semibold">Your Dashboard</h2>
+
+<section class="mx-5 my-3">
+  <h3 class="text-lg font-medium">Write a Review</h3>
+  <form class="new-post-form bg-white p-3 rounded shadow-md">
+    <div class="flex flex-col mb-3">
+      <label for="park-name">Park Name</label>
+      <input type="text" id="park-name" class="p-1 rounded border border-solid border-slate-300" />
+    </div>
+    <div class="flex flex-col mb-3">
+      <label for="location">Location</label>
+      <input type="text" id="location" class="p-1 rounded border border-solid border-slate-300" />
+    </div>
+    <div class="flex flex-col mb-3">
+      <label for="review">Review</label>
+      <textarea id="review" class="p-1 rounded border border-solid border-slate-300"></textarea>
+    </div>
+    <button type="submit" class="btn py-1 px-8 bg-yellow-300 hover:bg-white hover:border hover:border-yellow-300 rounded shadow-md my-3">Post Review</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section class="mt-1 mb-3">
+    <h3 class="text-lg font-medium ml-5">Your Reviews</h3>
+    <ul class="post-list">
+        {{#each posts as |post|}}
+        <li class="mx-5 mb-5">
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="dit-link py-1 px-8 bg-yellow-300 hover:bg-white hover:border hover:border-yellow-300 rounded shadow-md grid justify-items-center">Edit Review</a>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
