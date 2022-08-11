@@ -1,17 +1,7 @@
-<div class="flex flex-col mx-5 mt-5">
-  <p class="text-center mb-2">Find reviews on parks and playgrounds.<br>
-    {{#if loggedIn}}
-    Visit the Dashboard to leave your own review.
-    {{else}}
-    Sign up or log in to leave your own review!</p>
-    {{/if}}
-  <h2 class="text-xl font-semibold">Latest Reviews</h2>
-
-  <ul class="mt-5 md:w-full">
-    {{#each posts as |post|}}
-      <li class="mx-5 mb-5">
-        {{> post-info post }}
-      </li>
-    {{/each}}
-  </ul>
-</div>
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>

@@ -1,10 +1,12 @@
-<div class="m-5">
-    <h3 class="text-lg font-medium">Comments</h3>
+<div class="comments">
     {{#each this}}
-    <p class="comment-list bg-white p-3 rounded shadow-md mb-3">
-        {{comment_text}}
-        </br>
-        <span class="post-credit text-sm italic">Posted by {{user.username}} on {{format_date created_at}}</span>
-    </p>
+    <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+    {{comment_text}}
+    </div>        
+    </section>
     {{/each}}
 </div>

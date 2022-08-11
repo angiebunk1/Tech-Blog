@@ -1,22 +1,18 @@
-<div class="mx-10 mt-10">
-{{> post-info post }}
-</div>
+{{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form bg-white p-3 rounded shadow-md mx-10 mt-5">
-    <div class="mb-3">
-        <textarea name="comment-body" class="p-1 rounded border border-solid border-slate-300 w-full"></textarea>
-    </div>
-        
-    <div>
-        <button type="submit" class="btn py-1 px-8 bg-yellow-300 hover:bg-white hover:border hover:border-yellow-300 rounded shadow-md">Add Comment</button>
-    </div>
- </form>
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
 {{/if}}
 
-<div class="m-5">
 {{> comments post.comments}}
-</div>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

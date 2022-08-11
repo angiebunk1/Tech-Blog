@@ -1,16 +1,13 @@
-<article class="bg-white p-3 rounded shadow-md">
-  <h3 class="post-title">
+<article class="post">
+  <h3>
     <a
       href="/post/{{id}}"
-      class="text-lg font-medium underline decoration-sky-400"
-    >{{park_name}}</a>
+    >{{post_title}}</a>
   </h3>
-  <p class="post-content">
-    {{location}}
-    <br />
-    {{review}}
-    <br />
-    <span class="post-credit text-sm italic">Posted by
+   <br />
+    {{post_content}}
+  <br />
+    <span>Posted by
       {{user.username}}
       on
       {{format_date created_at}}</span>
