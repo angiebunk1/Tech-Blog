@@ -3,46 +3,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PARKOUR</title>
-    <link rel="stylesheet" href="/stylesheets/output.css">
-    {{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
-    {{! Google Fonts }}
-    {{! <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap"
-      rel="stylesheet"
-    /> }}
+    <title>TECH BLOG</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-  <body class="bg-sky-400 relative">
-    <header class="bg-yellow-300 text-center py-3">
-      <h1 class="text-5xl">
-        <a href="/">P.A.R.K.O.U.R.</a>
+  <body>
+    <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">TECH BLOG</a>
       </h1>
-      <p>People Around Rambunctious Kids Openly Utilizing Recreation</p>
 
-      <nav class="pt-3">
-        <ul class="list-none flex flex-wrap justify-center">
-          <li
-            class="text-black hover:text-white bg-white hover:bg-black rounded-md shadow-md basis-1/4 m-1 py-1"
-          >
+      <nav>
+        <ul>
+          <li>
             <a href="/">Home</a>
           </li>
           {{#if loggedIn}}
-            <li
-              class="text-black hover:text-white bg-white hover:bg-black rounded-md shadow-md basis-1/4 m-1 py-1"
-            >
+            <li>
               <a href="/dashboard">Dashboard</a>
             </li>
-            <li
-              class="text-black hover:text-white bg-white hover:bg-black rounded-md shadow-md basis-1/4 m-1 py-1"
-            >
+            <li>
               <button id="logout">Logout</button>
             </li>
           {{else}}
-            <li
-              class="text-black hover:text-white bg-white hover:bg-black rounded-md shadow-md basis-1/4 m-1 py-1"
-            >
+            <li>
               <a href="/login">Login/Sign Up</a>
             </li>
           {{/if}}
@@ -54,10 +38,11 @@
       {{{body}}}
 
     </main>
-    <footer class="p-4 absolute bottom-0 w-full">
-      <p class="text-xs absolute bottom-0">&copy; 2022 Angela Gustafson, Joseph
-        Kurpierz, Kristy Nerhaugen, Kayla Backus</p>
+  <footer>
+      <p>&copy; 2022 Angie Gustafson</p>
     </footer>
+  </div>
+
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
