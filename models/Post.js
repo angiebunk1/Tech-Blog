@@ -13,21 +13,14 @@ Post.init(
       primaryKey: true,
       autoIncrement: true
     },
-    park_name: {
+    post_title: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }      
-    },
-    review: {
+    post_content: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

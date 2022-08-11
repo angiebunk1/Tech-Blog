@@ -3,53 +3,53 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-    username: 'skellington',
-    email: 'jackandsally4ever@gmail.com',
+    username: 'drax',
+    email: 'ihatethanos@gmail.com',
     password: 'password123'
   },
   {
-    username: 'pingu',
-    email: 'nootnoot@yahoo.com',
+    username: 'rocket',
+    email: 'iheartgroot@yahoo.com',
     password: 'password123'
   },
   {
-    username: 'cosmicangela',
-    email: 'spawn@aol.com',
+    username: 'groot',
+    email: 'iamgroot@aol.com',
     password: 'password123'
   },
   {
-    username: 'harrison',
-    email: 'iheartringo@hotmail.com',
+    username: 'gamora',
+    email: 'vengeance@hotmail.com',
     password: 'password123'
   },
   {
-    username: 'winifred',
-    email: 'sandersonsisters@frontiernet.net',
+    username: 'nebula',
+    email: 'imbluedabadedabadi@frontiernet.net',
     password: 'password123'
   },
   {
-    username: 'pikachu',
-    email: 'gottacatchemall@gmail.com',
+    username: 'quill',
+    email: 'starlord@gmail.com',
     password: 'password123'
   },
   {
-    username: 'phineas',
-    email: 'perrytheplatypus@yahoo.com',
+    username: 'nandu',
+    email: 'ravengercode@yahoo.com',
     password: 'password123'
   },
   {
-    username: 'swiper',
-    email: 'noswiping@aol.com',
+    username: 'taserface',
+    email: 'dumbname@aol.com',
     password: 'password123'
   },
   {
-    username: 'godofmischief',
-    email: 'loki@hotmail.com',
+    username: 'thecollector',
+    email: 'gottacatchemall@hotmail.com',
     password: 'password123'
   },
   {
-    username: 'starlord',
-    email: 'quill@frontiernet.net',
+    username: 'ego',
+    email: 'wholefrickinplanet@frontiernet.net',
     password: 'password123'
   }
 ];
