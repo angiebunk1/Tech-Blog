@@ -3,10 +3,10 @@ const sequelize = require("../../config/connection");
 const { Post, User, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// route to get all posts/reviews
+// route to get all posts
 router.get("/", (req, res) => {
   Post.findAll({
-    attributes: ["id", "park_name", "location", "review", "created_at"],
+    attributes: ["id", "post_title", "post_content", "created_at"],
     order: [["created_at", "DESC"]],
     include: [
       {
@@ -30,13 +30,13 @@ router.get("/", (req, res) => {
     });
 });
 
-// route to get post/review by id
+// route to get post by id
 router.get("/:id", (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "park_name", "location", "review", "created_at"],
+    attributes: ["id", "post_title", "post_content", "created_at"],
     include: [
       {
         model: Comment,
@@ -65,13 +65,12 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// post route to create new post/review
+// post route to create new post
 router.post("/", withAuth, (req, res) => {
-  // expects a park name, location, review, and user id
+  // expects a post title, post content, and user id
   Post.create({
-    park_name: req.body.park_name,
-    location: req.body.location,
-    review: req.body.review,
+    post_title: req.body.post_title,
+    post_content: req.body.post_content,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
@@ -80,13 +79,12 @@ router.post("/", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-// put route to update post/review by id
+// put route to update post by id
 router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
-      park_name: req.body.park_name,
-      location: req.body.location,
-      review: req.body.review,
+      post_title: req.body.post_title,
+      post_content: req.body.post_content,
     },
     {
       where: {
@@ -107,7 +105,7 @@ router.put("/:id", withAuth, (req, res) => {
     });
 });
 
-// delete route to delete a post/review by id
+// delete route to delete a post by id
 router.delete("/:id", withAuth, (req, res) => {
   console.log("id", req.params.id);
   Post.destroy({

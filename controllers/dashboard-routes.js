@@ -3,14 +3,14 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-// get all of the user's reviews/posts for user's dashboard
-// only get the reviews/posts created by the user
+// get all of the user's posts for user's dashboard
+// only get the posts created by the user
 router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "park_name", "location", "review", "created_at"],
+    attributes: ["id", "post_title", "post_content", "created_at"],
     include: [
       {
         model: Comment,
@@ -36,11 +36,11 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-//get by id one of the user's reviews/posts so they can edit it
+//get by id one of the user's posts so they can edit it
 
 router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
-    attributes: ["id", "park_name", "location", "review", "created_at"],
+    attributes: ["id", "post_title", "post_content", "created_at"],
     include: [
       {
         model: Comment,
