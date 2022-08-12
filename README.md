@@ -4,7 +4,7 @@
 
 This is an blog site for people in the tech world to post how-tos, reviews, and other content about technology. Users can create an account to post their own blog entries and comments. They can also edit and delete their own posts and comments.
 
-Deployed application can be accessed at this link: [https://desolate-temple-40613.herokuapp.com/] (https://desolate-temple-40613.herokuapp.com/).
+Deployed application can be accessed at this link: https://desolate-temple-40613.herokuapp.com/
 
 ## Usage
 
